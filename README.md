@@ -17,7 +17,7 @@ How to access the SAP ABAP cloud trial enviroment? follow the steps in the below
 **User Master Data Maintenance**
 
 You have a requirement to complete a solution that was started by another developer. The requirement is to develop an ABAP class that performs CRUD operations for the User Master Data. 
-The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package YASSESSMENT_TASK in the ABAP trail enviroment). ![](AssessmentPackage.png)
+The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package YASSESSMENT_TASK in the ABAP trial environment). ![](AssessmentPackage.png)
 
 1. Your task is to complete the development by: 
 -	Creating a corresponding table to store the data (i.e ZUSER_MASTER).
