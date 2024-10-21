@@ -1,6 +1,8 @@
 # Pre-requisites
 This exercise is available on the SAP ABAP cloud trial enviroment(aka Steampunk) and the expectation is that the developer uses the same enviroment to fulfill/develop the provided requirements.
-The ABAP cloud environment uses the ABAP cloud language version/model by default. What is ABAP Cloud? It is the new ABAP development model for building cloud-enabled business applications, services and extensions.
+The ABAP cloud environment uses the ABAP cloud language version/model by default. 
+
+What is ABAP Cloud? It is the new ABAP development model for building cloud-enabled business applications, services and extensions.
 For more information on ABAP cloud, read this [blog](https://community.sap.com/t5/technology-blogs-by-sap/abap-cloud-what-does-it-comprise/ba-p/13563607)
 
 Without reading deepely into the above blog post, what do you need to know about ABAP cloud in relation to this exercise?
@@ -13,6 +15,7 @@ How to access the SAP ABAP cloud trial enviroment? follow the steps in the below
 
 # Requirement
 **User Master Data Maintenance**
+
 You have a requirement to complete a solution that was started by another developer. The requirement is to develop an ABAP class that performs CRUD operations for the User Master Data. 
 The previous developer had already created a skeleton class ZCL_USER_MASTER. Your task is to complete the development by: 
 1.	Creating a corresponding table to store the data (i.e ZUSER_MASTER).
