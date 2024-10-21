@@ -1,48 +1,59 @@
-class ZCL_USER_MASTER_DATA definition
-  public
-  create public .
+CLASS zcl_user_master_data DEFINITION
+  PUBLIC
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  methods CREATE_USER
-    importing
-      !USER_DATA type ZUSER_MASTER .
-  methods READ_USER
-    importing
-      !USER_ID type XUBNAME
-    returning
-      value(USER_DATA) type ZUSER_MASTER .
-  methods UPDATE_USER
-    importing
-      !USER_DATA type ZUSER_MASTER .
-  methods DELETE_USER
-    importing
-      !USER_ID type XUBNAME .
+    METHODS create_user
+      IMPORTING
+        !user_data TYPE zuser_master
+      RAISING
+        zcl_user_master_exceptions .
+    METHODS read_user
+      IMPORTING
+        !user_id         TYPE zuser_master-user_id
+      RETURNING
+        VALUE(user_data) TYPE zuser_master
+      RAISING
+        zcl_user_master_exceptions .
+    METHODS update_user
+      IMPORTING
+        !user_data TYPE zuser_master
+      RAISING
+        zcl_user_master_exceptions .
+    METHODS delete_user
+      IMPORTING
+        !user_id TYPE zuser_master-user_id
+      RAISING
+        zcl_user_master_exceptions.
   PRIVATE SECTION.
     DATA: lt_user_master TYPE TABLE OF zuser_master.
 ENDCLASS.
 
 
 
-CLASS ZCL_USER_MASTER_DATA IMPLEMENTATION.
+CLASS zcl_user_master_data IMPLEMENTATION.
 
 
   METHOD create_user.
-    INSERT zuser_master FROM user_data.
+    INSERT zuser_master FROM @user_data.
     IF sy-subrc NE 0.
-      MESSAGE 'Error creating user' TYPE 'E'.
+      RAISE EXCEPTION TYPE zcl_user_master_exceptions EXPORTING textid = zcl_user_master_exceptions=>creation_error.
     ENDIF.
   ENDMETHOD.
 
 
   METHOD read_user.
     SELECT SINGLE *
-      INTO CORRESPONDING FIELDS OF user_data
       FROM zuser_master
-      WHERE user_id = user_id.
+      WHERE user_id = @user_id
+            INTO CORRESPONDING FIELDS OF @user_data.
     IF sy-subrc NE 0.
       CLEAR user_data.
-      MESSAGE 'User not found' TYPE 'E'.
+      RAISE EXCEPTION TYPE zcl_user_master_exceptions
+        EXPORTING
+          textid   = zcl_user_master_exceptions=>read_error
+          username = CONV #( USER_ID ).
     ENDIF.
   ENDMETHOD.
 
@@ -60,16 +71,22 @@ CLASS ZCL_USER_MASTER_DATA IMPLEMENTATION.
           valid_to        = @user_data-valid_to
       WHERE user_id = @user_data-user_id.
     IF sy-subrc NE 0.
-      MESSAGE 'Error updating user' TYPE 'E'.
+      RAISE EXCEPTION TYPE zcl_user_master_exceptions
+        EXPORTING
+          textid   = zcl_user_master_exceptions=>update_error
+          username = CONV #( user_data-user_id ).
     ENDIF.
   ENDMETHOD.
 
 
   METHOD delete_user.
     DELETE FROM zuser_master
-      WHERE user_id = user_id.
+      WHERE user_id = @user_id.
     IF sy-subrc NE 0.
-      MESSAGE 'Error deleting user' TYPE 'E'.
+      RAISE EXCEPTION TYPE zcl_user_master_exceptions
+        EXPORTING
+          textid   = zcl_user_master_exceptions=>delete_error
+          username = CONV #( user_id ).
     ENDIF.
   ENDMETHOD.
 ENDCLASS.

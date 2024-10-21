@@ -15,7 +15,7 @@ CLASS ltcl_test_user_master_data DEFINITION FOR TESTING
     DATA:
       user_master_data TYPE REF TO zcl_user_master_data,
       user_data TYPE zuser_master,
-      user_id TYPE xubname.
+      user_id TYPE ZUSER_MASTER-user_id.
 
 ENDCLASS.
 
