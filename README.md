@@ -10,9 +10,7 @@ Without reading deepely into the above blog post, what do you need to know about
 - Use this link to check which language elements are allowed in [ABAP cloud](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrestricted_abap_elements.htm)
 
 How to access the SAP ABAP cloud trial enviroment? follow the steps in the below tutorial
-
 **NB: The SAP ABAP cloud trial enviroment only allows Eclipse as an IDE to do your ABAP development**
-
 [Connecting ABAP Cloud Project in Eclipse with SAP BTP Cockpit (Trial Account)](https://www.linkedin.com/pulse/connecting-abap-cloud-project-eclipse-sap-btp-cockpit-castro-cholan-d33fe/)
 
 # Requirement
