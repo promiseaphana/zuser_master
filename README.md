@@ -9,15 +9,16 @@ Without reading deepely into the above blog post, what do you need to know about
 - In ABAP cloud SAP has restricted some of the language elements i.e You cannot use **REPORT**, **WRITE**, **SELECT** from a standard table etc
 - Use this link to check which language elements are allowed in [ABAP cloud](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrestricted_abap_elements.htm)
 
-How to access the SAP ABAP cloud trial enviroment? follow the steps in the below tutorial
-**NB: The SAP ABAP cloud trial enviroment only allows Eclipse as an IDE to do your ABAP development**
+How to access the SAP ABAP cloud trial enviroment? follow the steps in the below tutorial (**When creating a BTP trial account ensure to Select Singapore as the Region**)                                                                                                       **NB: The SAP ABAP cloud trial enviroment only allows Eclipse as an IDE to do your ABAP development**                                                                                                                                                                 
 [Connecting ABAP Cloud Project in Eclipse with SAP BTP Cockpit (Trial Account)](https://www.linkedin.com/pulse/connecting-abap-cloud-project-eclipse-sap-btp-cockpit-castro-cholan-d33fe/)
 
 # Requirement
 **User Master Data Maintenance**
 
 You have a requirement to complete a solution that was started by another developer. The requirement is to develop an ABAP class that performs CRUD operations for the User Master Data. 
-The previous developer had already created a skeleton class ZCL_USER_MASTER. Your task is to complete the development by: 
+The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package ZASSESSMENT_TASK in the ABAP trail enviroment). ![](AssessmentPackage.png)
+
+Your task is to complete the development by: 
 1.	Creating a corresponding table to store the data (i.e ZUSER_MASTER).
 2.	Completing the class with all the required logic in the CRUD methods
 3.	Performing error handling after every Operation
