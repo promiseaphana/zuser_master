@@ -6,11 +6,13 @@ What is ABAP Cloud? It is the new ABAP development model for building cloud-enab
 For more information on ABAP cloud, read this [blog](https://community.sap.com/t5/technology-blogs-by-sap/abap-cloud-what-does-it-comprise/ba-p/13563607)
 
 Without reading deepely into the above blog post, what do you need to know about ABAP cloud in relation to this exercise?
-- In ABAP cloud SAP has restricted some of the language elements i.e You cannot use REPORT, WRITE, SELECT from a standard table etc
+- In ABAP cloud SAP has restricted some of the language elements i.e You cannot use **REPORT**, **WRITE**, **SELECT** from a standard table etc
 - Use this link to check which language elements are allowed in [ABAP cloud](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrestricted_abap_elements.htm)
 
 How to access the SAP ABAP cloud trial enviroment? follow the steps in the below tutorial
+
 **NB: The SAP ABAP cloud trial enviroment only allows Eclipse as an IDE to do your ABAP development**
+
 [Connecting ABAP Cloud Project in Eclipse with SAP BTP Cockpit (Trial Account)](https://www.linkedin.com/pulse/connecting-abap-cloud-project-eclipse-sap-btp-cockpit-castro-cholan-d33fe/)
 
 # Requirement
