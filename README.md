@@ -17,14 +17,14 @@ How to access the SAP ABAP cloud trial enviroment? follow the steps in the below
 **User Master Data Maintenance**
 
 You have a requirement to complete a solution that was started by another developer. The requirement is to develop an ABAP class that performs CRUD operations for the User Master Data. 
-The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package YASSESSMENT_TASK in the ABAP trial environment). ![](AssessmentPackage.png)
+The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package Y&YOURNAME&_ASSESSMENT_TASK in the ABAP trial environment). ![](AssessmentPackage.png)
 
 1. Your task is to complete the development by: 
--	Creating a corresponding table to store the data (i.e ZUSER_MASTER).
+-	Creating a corresponding table to store the data (i.e ZUSER_MASTER_XX) replace XX with your Initials i.e ZUSER_MASTER_MM.
 -	Completing the class with all the required logic in the CRUD methods
 -	Performing error handling after every Operation
  
 2. In your team you have been discussing the possibility of creating an OData service strictly from Eclipse without using an SAP Backend. 
-   For knowledge sharing purposes, you have been tasked to create a CDS view for the table you created above (ZUSER_MASTER) and expose/publish it as an OData service.
+   For knowledge sharing purposes, you have been tasked to create a CDS view for the table you created above (ZUSER_MASTER_XX) and expose/publish it as an OData service.
 
 3. Lastly, to demonstrate the usability of the OData service, create an HTTP ABAP class (API) to consume the above OData service and GET all the users in the table.
