@@ -18,7 +18,7 @@ How to access the SAP ABAP cloud trial enviroment? follow the steps in the below
 
 You have a requirement to complete a solution that was started by another developer. The requirement is to develop an ABAP class that performs CRUD operations for the User Master Data. 
 The previous developer had already created a skeleton class ZCL_USER_MASTER (can be found in package **Y&YOURNAME&_ASSESSMENT_TASK** in the ABAP trial environment under the **ZLOCAL** package) e.g **if your name is Promise Aphana, the package name will be ZPROMISE_ASSESSMENT_TASK and class will be ZCL_USER_MASTER_PA**. 
-![](AssessmentPackage.png)
+![](AssessmentPackages.png)
 
 1. Your task is to complete the development by: 
 -	Creating a corresponding table to store the data (i.e ZUSER_MASTER_XX) replace XX with your Initials i.e ZUSER_MASTER_MM.
